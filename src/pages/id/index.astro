@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getDictionary } from '../../lib/dictionaries';
+import { getPortfolioData } from '../../lib/data';
+import Header from '../../components/Header';
+import Hero from '../../components/sections/Hero';
+import About from '../../components/sections/About';
+import Skills from '../../components/sections/Skills';
+import Services from '../../components/sections/Services';
+import Projects from '../../components/sections/Projects';
+import Education from '../../components/sections/Education';
+import Certificates from '../../components/sections/Certificates';
+import Contact from '../../components/sections/Contact';
+import Footer from '../../components/Footer';
+
+const lang = 'id';
+const dictionary = await getDictionary(lang);
+const data = await getPortfolioData();
+---
+
+<Layout title={`${data.name} - ${dictionary.metadata.portfolio}`} lang={lang}>
+	<Header dictionary={dictionary} lang={lang} client:load />
+	<main>
+		<Hero 
+			data={data} 
+			dictionary={dictionary} 
+			lang={lang} 
+			client:load 
+		/>
+		<About 
+			about={data.about[lang]} 
+			dictionary={dictionary} 
+			client:load 
+		/>
+		<Skills 
+			softSkills={data.softSkills}
+			hardSkills={data.hardSkills}
+			softwareSkills={data.softwareSkills}
+			dictionary={dictionary}
+			client:load 
+		/>
+		<Services 
+			dictionary={dictionary}
+			client:load 
+		/>
+		<Projects 
+			projects={data.projects}
+			dictionary={dictionary}
+			lang={lang}
+			client:load 
+		/>
+		<Education 
+			education={data.education}
+			dictionary={dictionary}
+			lang={lang}
+			client:load 
+		/>
+		<Certificates 
+			certificates={data.certificates}
+			dictionary={dictionary}
+			lang={lang}
+			client:load 
+		/>
+		<Contact 
+			contact={data.contact}
+			dictionary={dictionary}
+			client:load 
+		/>
+	</main>
+	<Footer dictionary={dictionary} name={data.name} />
+</Layout>

@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About - Studio Major">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">About Studio Major</h1>
+    
+    <div class="prose prose-lg max-w-none">
+      <p class="text-xl text-gray-600 mb-6">
+        Studio Major is a modern web application that has been successfully migrated from Next.js to Astro.
+      </p>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why Astro?</h2>
+      <ul class="space-y-3 text-gray-600 mb-8">
+        <li>⚡ **Performance**: Static by default with selective hydration</li>
+        <li>🧩 **Framework Agnostic**: Use React, Vue, Svelte, or any framework</li>
+        <li>📦 **Zero Config**: Built-in optimizations out of the box</li>
+        <li>🎯 **SEO Friendly**: Perfect for content-driven websites</li>
+      </ul>
+      
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Migration Benefits</h2>
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <p class="text-blue-800">
+          By migrating from Next.js to Astro, we've achieved faster loading times, 
+          better SEO, and improved developer experience while maintaining the ability 
+          to use React components where needed.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

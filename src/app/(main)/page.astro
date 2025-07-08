@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/sections/Hero';
+import About from '../../components/sections/About';
+import { getPortfolioData } from '../../lib/data';
+import { getDictionary } from '../../lib/dictionaries';
+
+const lang = 'en';
+const dictionary = await getDictionary(lang);
+const portfolioData = await getPortfolioData();
+---
+
+<Layout title="Studio Major - Portfolio">
+  <Hero 
+    data={portfolioData} 
+    dictionary={dictionary}
+    lang={lang}
+    client:load
+  />
+  <About 
+    about={portfolioData.about[lang]} 
+    dictionary={dictionary}
+    client:load
+  />
+</Layout>

@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "profile": "Profil",
+    "about": "Tentang",
+    "skills": "Keahlian",
+    "services": "Layanan",
+    "projects": "Proyek",
+    "certificates": "Sertifikat",
+    "contactMe": "Hubungi Saya"
+  },
+  "hero": {
+    "downloadCV": "Unduh CV"
+  },
+  "about": {
+    "title": "Tentang Saya"
+  },
+  "skills": {
+    "title": "Keahlian",
+    "softSkills": "Soft Skills",
+    "hardSkills": "Hard Skills",
+    "softwareSkills": "Keahlian Perangkat Lunak"
+  },
+  "services": {
+    "title": "Layanan",
+    "socialMediaSpecialist": "Sosial Media Specialist",
+    "digitalMarketing": "Digital Marketing",
+    "buttonText": "Selengkapnya"
+  },
+  "projects": {
+    "title": "Proyek Portofolio",
+    "description": "Berikut adalah beberapa proyek yang telah saya kerjakan untuk menunjukkan keahlian saya.",
+    "viewDetails": "Lihat Detail"
+  },
+  "education": {
+    "title": "Pendidikan",
+    "description": "Perjalanan akademis saya."
+  },
+  "certificates": {
+    "title": "Sertifikat/Lisensi",
+    "viewCertificate": "Lihat Sertifikat"
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "description": "Saya terbuka untuk peluang dan kolaborasi baru. Jangan ragu untuk menghubungi saya!",
+    "sendEmail": "Kirim Email"
+  },
+  "footer": {
+    "rights": "Hak cipta dilindungi."
+  },
+  "metadata": {
+    "portfolio": "Portofolio"
+  }
+}

@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LoginForm from '../../components/LoginForm';
+
+const title = "Admin Login - Studio Major";
+---
+
+<Layout title={title}>
+  <div class="flex min-h-screen items-center justify-center bg-secondary/50 p-4">
+    <LoginForm client:load />
+  </div>
+</Layout>

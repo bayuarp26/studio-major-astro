@@ -1,33 +1,103 @@
-# Astro Starter Kit: Minimal
+# Studio Major - Astro Application
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A modern web application migrated from Next.js to Astro, featuring React integration and Tailwind CSS styling.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## 🚀 Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Astro Framework**: Static site generation with zero-config optimizations
+- **React Integration**: Interactive components with client-side hydration
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **TypeScript**: Full type safety across the application
+- **File-based Routing**: Intuitive routing system based on file structure
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Project Structure
 
 ```text
 /
-├── public/
+├── public/                 # Static assets
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/        # React components (.tsx)
+│   ├── layouts/          # Astro layout components
+│   ├── pages/            # Astro pages (routes)
+│   └── styles/           # Global CSS files
+├── .github/
+│   └── copilot-instructions.md  # Copilot customization
+├── astro.config.mjs       # Astro configuration
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## �️ Getting Started
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Any static assets, like images, can be placed in the `public/` directory.
+2. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+4. **Preview production build:**
+   ```bash
+   npm run preview
+   ```
+
+## 🎯 Migration from Next.js
+
+This project has been migrated from Next.js to Astro. Key changes include:
+
+- **Pages**: Next.js pages converted to Astro pages in `src/pages/`
+- **Components**: React components maintained with `client:` directives
+- **Routing**: File-based routing (similar to Next.js but with `.astro` extensions)
+- **Styling**: Tailwind CSS integration for consistent styling
+- **Performance**: Static generation by default with selective hydration
+
+## 🧩 Component Usage
+
+### React Components with Hydration
+
+```astro
+---
+import Button from '../components/Button.tsx';
+---
+
+<!-- Use client:load for immediate hydration -->
+<Button client:load>Click me</Button>
+
+<!-- Use client:idle for lazy hydration -->
+<Button client:idle>Lazy button</Button>
+
+<!-- Use client:visible for viewport-based hydration -->
+<Button client:visible>Visible button</Button>
+```
+
+### Astro Components
+
+```astro
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="My Page">
+  <h1>Welcome to Astro!</h1>
+</Layout>
+```
+
+## 📚 Learn More
+
+- [Astro Documentation](https://docs.astro.build)
+- [React Integration](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+
+## 🤝 Contributing
+
+Feel free to contribute to this project by submitting issues or pull requests.
 
 ## 🧞 Commands
 
