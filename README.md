@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Studio Major - Astro Application
 
 A modern web application migrated from Next.js to Astro, featuring React integration and Tailwind CSS styling.
@@ -115,3 +116,9 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+---
+
+# Studio Major Astro
+
+Portfolio application with admin dashboard, migrated from Next.js to Astro with MongoDB integration.
